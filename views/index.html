@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>File Metadata Microservice</title>
+      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="/public/style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+      <div class="container">
+         <h1>File Metadata Microservice</h1>
+         <h3>Submit a file to view its file size</h3>
+        <br>
+        <form action="input" method="POST">
+          <input type="file" name="upload">
+          <input type="submit" value="Upload">
+        </form>
+        <br>
+        <h3>
+           User Stories
+        </h3>
+        <ul style="text-align:left;margin:auto;display:inline-block">
+          <li><p>
+            1. I can submit a FormData object that includes a file upload.
+            </p></li>
+          <li><p>
+            2. When I submit something, I will receive the file size in bytes within the JSON response
+            </p></li>
+        </ul>
+      </div>
+   </body>
+
+</html>
