@@ -19,7 +19,7 @@ app.route('/')
 
 var storage = multer.diskStorage({
     destination: function(req, file, callback){
-        callback(null, 'public/');
+        callback(null, 'uploaded-files/');
     },
     filename: function(req, file, callback){
         callback(null, Date.now() + "-" + file.originalname)
@@ -30,9 +30,8 @@ var upload = multer({storage:storage}).single('file');
 
 
 app.post('/', upload, function(req,res){
-  var name = req.file.size;
   console.log(req.file);
-  res.end();
+  res.json({"size":req.file.size});
 });
 
 app.listen(process.env.PORT, function () {
