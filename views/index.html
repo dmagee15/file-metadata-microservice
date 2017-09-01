@@ -13,8 +13,8 @@
          <h1>File Metadata Microservice</h1>
          <h3>Submit a file to view its file size</h3>
         <br>
-        <form action="input" method="POST">
-          <input type="file" name="upload">
+        <form method="POST" enctype="multipart/form-data">
+          <input type="file" name="file">
           <input type="submit" value="Upload">
         </form>
         <br>
